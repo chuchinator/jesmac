@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy: #0a1f38;
+  --navy-mid: #0f2d4d;
+  --navy-deep: #061222;
+  --navy-glow: rgba(56, 120, 200, 0.15);
+  --gold: #c9a227;
+  --gold-bright: #e4c04a;
+  --gold-hover: #b08c1c;
+  --gold-soft: rgba(201, 162, 39, 0.14);
+  --gold-glow: rgba(201, 162, 39, 0.35);
+  --white: #ffffff;
+  --off-white: #f6f8fc;
+  --gray-50: #eef2f8;
+  --gray-100: #dce4ef;
+  --text: #2a3544;
+  --text-muted: #5a6b7d;
+  --border: rgba(10, 31, 56, 0.1);
+  --border-strong: rgba(10, 31, 56, 0.16);
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow-sm: 0 2px 8px rgba(6, 18, 34, 0.06);
+  --shadow-md: 0 12px 40px rgba(6, 18, 34, 0.1);
+  --shadow-lg: 0 24px 64px rgba(6, 18, 34, 0.14);
+  --shadow-gold: 0 8px 32px var(--gold-glow);
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --header-h: 72px;
+
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--off-white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--gold-soft);
+  color: var(--navy-deep);
+}
